@@ -14,12 +14,12 @@
 }
 
 body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg);
-  color: rgb(255, 255, 221);
-  position: relative; /* Agar posisi relatif terhadap body */
-  height: 100vh; /* Mengisi tinggi viewport */
-  overflow: hidden; /* Mencegah scrollbar jika ada elemen yang keluar */
+  background-color: var(--bg); /* Background halaman */
 }
 
 /* navbar */
@@ -28,7 +28,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgb(255, 255, 221);
+  background-color: rgba(255, 255, 221, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -229,29 +229,56 @@ body {
   ); /* Menggeser oval ke kiri sebesar setengah lebar oval */
 }
 
+.hero {
+  padding: 5%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Pusatkan secara vertikal */
+  position: relative;
+  top: 3rem;
+
+  background-color: var(--bg);
+}
+
+/* Card Style */
 .card {
   width: 90%; /* Lebar card responsif */
-  max-width: 400px; /* Batas maksimum lebar card */
-  border-radius: 8px; /* Membuat sudut membulat */
+  max-width: 50rem; /* Batas maksimum lebar card */
+  border-radius: 15px; /* Membuat sudut membulat */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
   overflow: hidden;
   background-color: white;
-  padding: 20px;
-  text-align: center;
+  margin: 20px auto; /* Mengatur margin agar card berada di tengah */
+  border: 2px solid rgba(0, 0, 0, 0.25);
 }
 
-.card-image {
-  width: 100%; /* Gambar penuh lebar card */
-  height: 200px; /* Tinggi gambar */
-  object-fit: cover; /* Mengatur gambar agar sesuai ukuran card */
+/* icon di dalam card */
+
+.card-lokasi {
+  padding: 5%;
+  border-bottom: 0.1rem solid rgb(148, 148, 148);
 }
+
+.card-lokasi a {
+  align-items: start;
+  color: black;
+  margin: 0 0.5rem;
+}
+
+.card-lokasi span {
+  position: relative;
+  left: 10px;
+}
+/* Konten di dalam card */
 
 .card-content {
   padding: 20px;
   text-align: center;
+  position: relative; /* Membuat posisi relatif untuk elemen anak */
 }
 
-.card-title {
+.card-namalokasi {
+  align-items: start;
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 10px;
@@ -275,4 +302,90 @@ body {
 
 .card-button:hover {
   background-color: #0056b3;
+}
+
+/* Responsivitas */
+@media (min-width: 1024px) {
+  html {
+    font-size: 130%;
+  }
+  .card {
+    width: 150%; /* Lebar lebih besar pada layar besar */
+    max-width: 900px; /* Memperbesar batas maksimum lebar card */
+  }
+
+  .weather-logo {
+    width: 100px; /* Ukuran logo cuaca lebih besar */
+  }
+
+  .humidity,
+  .temperature {
+    font-size: 1.5rem; /* Ukuran font lebih besar */
+  }
+}
+
+@media (min-width: 758px) {
+  html {
+    font-size: 130%;
+  }
+  .card {
+    width: 130%; /* Lebar penuh pada layar kecil */
+    padding: 10px;
+  }
+
+  .weather-logo {
+    width: 60px; /* Ukuran logo cuaca lebih kecil pada layar kecil */
+  }
+
+  .humidity,
+  .temperature {
+    font-size: 1.3rem; /* Ukuran font lebih kecil */
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 100%; /* Lebar lebih besar pada layar besar */
+  }
+
+  .card {
+    padding: 5px; /* Padding lebih kecil pada layar sangat kecil */
+  }
+
+  .humidity,
+  .temperature {
+    font-size: 1rem; /* Ukuran font lebih kecil lagi */
+  }
+}
+/* css cuaca */
+
+.weather-info {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  align-items: flex-start; /* Pusatkan vertikal dari atas */
+  justify-content: space-between; /* Ruang antar elemen */
+  margin-bottom: 15px; /* Jarak antara info cuaca dan konten lainnya */
+}
+
+.weather-logo {
+  width: 80px; /* Ukuran logo cuaca */
+  height: auto; /* Tinggi otomatis untuk proporsional */
+  margin-right: 15rem; /* Jarak antara logo dan informasi lainnya */
+  border-right: 0.1rem solid rgb(148, 148, 148);
+}
+
+.humidity {
+  position: absolute; /* Mengatur posisi kelembapan secara absolut */
+  right: 10px; /* Jarak dari kanan */
+  top: 10px; /* Jarak dari atas */
+  font-size: 1.3rem; /* Ukuran font */
+  color: #333; /* Warna teks */
+}
+
+.temperature {
+  position: absolute; /* Mengatur posisi suhu secara absolut */
+  right: 10px; /* Jarak dari kanan */
+  top: 40%;
+  bottom: 10px; /* Jarak dari bawah */
+  font-size: 1.3rem; /* Ukuran font */
+  color: #333; /* Warna teks */
 }

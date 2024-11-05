@@ -61,20 +61,31 @@
                   <i data-feather="map-pin"></i>
                   <span class="card-namalokasi">Sumbersari Jember</span>
                 </a>
-
               </div>
               
               <div class="card-content">
                 <div class="weather-info">
                   <img src="logo.png" alt="Weather Logo" class="weather-logo"> <!-- Ganti dengan logo cuaca yang sesuai -->
-                  <div class="humidity" id="humidity">Humidity: 60%</div>
-                  <div class="temperature" id="temperature">Temperature: 22°C</div>
+                  <div class="humidity" id="humidity">Humidity: <span>60%</span></div>
+                  <div class="temperature" id="temperature">Temperature: <span>22°C</span></div>
                 </div>
-                
-                
               </div>
-              
           </div>
+
+          <div id="data-container">
+            <!-- Data content goes here -->
+          </div>
+          
+          <!-- Placeholder for "no data" message -->
+          <div id="no-data" style="display: none;">
+            <i data-feather="cpu" class="no-data-icon"></i>
+            <p>No Devices Added</p>
+          </div>
+
+          <button class="round-button">
+            <i data-feather="plus"></i>
+          </button>
+
           </main>
 
         </section>

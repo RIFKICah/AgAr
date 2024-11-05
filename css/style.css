@@ -245,7 +245,6 @@ body {
   width: 90%; /* Lebar card responsif */
   max-width: 50rem; /* Batas maksimum lebar card */
   border-radius: 15px; /* Membuat sudut membulat */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
   overflow: hidden;
   background-color: white;
   margin: 20px auto; /* Mengatur margin agar card berada di tengah */
@@ -312,6 +311,8 @@ body {
   .card {
     width: 150%; /* Lebar lebih besar pada layar besar */
     max-width: 900px; /* Memperbesar batas maksimum lebar card */
+
+    justify-content: center;
   }
 
   .weather-logo {
@@ -388,4 +389,50 @@ body {
   bottom: 10px; /* Jarak dari bawah */
   font-size: 1.3rem; /* Ukuran font */
   color: #333; /* Warna teks */
+}
+
+/* button bulat*/
+
+.round-button {
+  width: 60px; /* Ukuran tombol bulat */
+  height: 60px; /* Sama dengan lebar untuk membuatnya bulat */
+  background-color: white; /* Warna latar belakang tombol */
+  color: #61a3ba; /* Warna ikon */
+  border: 2px solid rgba(0, 0, 0, 0.25);
+
+  border-radius: 50%; /* Membuat tombol bulat */
+  display: flex;
+  justify-content: center; /* Pusatkan ikon secara horizontal */
+  align-items: center; /* Pusatkan ikon secara vertikal */
+  cursor: pointer;
+  position: relative;
+  margin: 20px auto; /* Membuat tombol berada di tengah secara horizontal */
+  transition: background-color 0.3s ease;
+  position: fixed; /* Menempel pada layar */
+  bottom: 20px; /* Jarak dari bawah layar */
+  right: 40px;
+}
+
+.round-button:hover {
+  background-color: #0056b3; /* Ubah warna saat di-hover */
+}
+
+/* Ukuran ikon */
+.round-button i {
+  font-size: 12px;
+}
+
+/*no data data kosong dan cpu belum terkoneksi*/
+.no-data-icon {
+  width: 80px;
+  height: 80px;
+  color: #666; /* Warna ikon */
+  display: block;
+  margin: 80px auto;
+}
+
+#no-data p {
+  text-align: center;
+  color: #666;
+  font-size: 1.3rem;
 }

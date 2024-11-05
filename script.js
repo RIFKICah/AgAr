@@ -21,3 +21,15 @@ window.addEventListener("load", function () {
     document.getElementById("main-content").style.display = "block"; // Tampilkan konten utama
   });
 });
+
+// Dummy query result (true if data exists, false if no data)
+let dataExists = false; // Ubah ke 'true' untuk mensimulasikan data tersedia
+
+if (!dataExists) {
+  document.getElementById("data-container").style.display = "none";
+  document.getElementById("no-data").style.display = "block";
+  feather.replace(); // Menjalankan Feather Icon
+} else {
+  document.getElementById("data-container").style.display = "block";
+  document.getElementById("no-data").style.display = "none";
+}

@@ -4,105 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AgAr</title>
- <!-- Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
- <!-- Font-->
-    <Link rel="stylesheet" href="css/style.css"></Link>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
- <!-- Icon-->
- <script src="https://unpkg.com/feather-icons"></script>
- <!-- Icon-->
   <body>
-
     <!-- Loading Screen -->
     <div id="loading1">
-        <img src="logo.png" alt="Logo" class="loading-logo">
-        <p>Powerd by Indobot</p>
-        <div class="oval"></div>
-        
-        
+      <img src="logo.png" alt="Logo" class="loading-logo" />
+      <p>Powered by Indobot</p>
+      <div class="oval"></div>
     </div>
 
-    <div id="landing-page" style="display: block;"> <!-- Ubah menjadi 'block' untuk melihat tampilannya -->
-        <img src="landingpage.png" alt="img" class="loading-page">
-        <h1>Smart Farming</h1>
-        <p>Enhancing agriculture</p>
-        <span>with innovative solutions</span>
-        <button id="explore-site">Explore</button> <!-- Pastikan button ini ada di dalam landing-page -->
+    <div id="landing-page" style="display: block">
+      <img src="landingpage.png" alt="img" class="loading-page" />
+      <h1>Smart Farming</h1>
+      <p>Enhancing agriculture</p>
+      <span>with innovative solutions</span>
+      <button id="explore-site">Explore</button>
     </div>
-    
-
 
     <!-- Login Page -->
-    <div id="login-page" style="display: none;">
-        <h1>Login Page</h1>
-        <p>Please log in to continue.</p>
-        <button id="skip-login">Skip</button>
+    <div id="login-page" style="display: none">
+      <h1>Login Page</h1>
+      <p>Please log in to continue.</p>
+      <a href="homepage.html">Skip Login</a>
     </div>
-    <!--navbar-->
 
-    <div id="main-content" style="display: none;">
-        <nav class="navbar">
-            <!--logo and setting-->
-            <a href="#home" class="navbar-logo"><img src="logo.png" alt="Logo" class="navbar-image"></a>
-            <div class="navbar-nav">
-                <a href="#setting" id="setting"><i data-feather="settings"></i></a>
-            </div>
-    
-        </nav>
-        <!--hero-->
-        <section class="hero" id="home">
-          <main class="content">
-            <div class="card">
-              <div class="card-lokasi">
-                <a href="#lokasi" id="lokasi">
-                  <i data-feather="map-pin"></i>
-                  <span class="card-namalokasi">Sumbersari Jember</span>
-                </a>
-              </div>
-              
-              <div class="card-content">
-                <div class="weather-info">
-                  <img src="logo.png" alt="Weather Logo" class="weather-logo"> <!-- Ganti dengan logo cuaca yang sesuai -->
-                  <div class="humidity" id="humidity">Humidity: <span>60%</span></div>
-                  <div class="temperature" id="temperature">Temperature: <span>22°C</span></div>
-                </div>
-              </div>
-          </div>
-
-          <div id="data-container">
-            <!-- Data content goes here -->
-          </div>
-          
-          <!-- Placeholder for "no data" message -->
-          <div id="no-data" style="display: none;">
-            <i data-feather="cpu" class="no-data-icon"></i>
-            <p>No Devices Added</p>
-          </div>
-
-          <button class="round-button">
-            <i data-feather="plus"></i>
-          </button>
-
-          </main>
-
-        </section>
-
-<!--hero-->
-        
-    </div>
-<!--navbar-->
-
-
-
-
-    <!-- Icon-->
+    <!-- Icon Feather -->
     <script>
-        feather.replace();
-      </script>
-
+      feather.replace();
+    </script>
 
     <!-- Loading Page Script -->
     <script src="script.js"></script>

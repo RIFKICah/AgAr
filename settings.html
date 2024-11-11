@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <Link rel="stylesheet" href="css/style.css"></Link>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    
+    
+  </head>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <body class="bodys-settings">
+    
+
+<div class="settings-container" id="settings-page">
+  <!-- Header -->
+  <div class="header">
+    <a href="homepage.html" id="arrowsett" class="arrow">
+      <i data-feather="arrow-left"></i> <!-- Feather Icon -->
+  </a>
+  
+     <!-- ganti menjadi icon panah                                -->
+    <span>Settings</span>
+  </div>
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <img src="profil-agar.png" alt="profile-img" class="profile-image">
+    <div class="profile-info">
+      <h3>Ahmad Jaelani</h3>
+      <p>A_Jaelani07@gmail.com</p>
+      <p>Member since </p>
+      <p>29 - 07 - 2024</p> 
+    </div>
+    <a href="# " id="edit-profil"><i data-feather="edit"></i> </a>
+    <!-- Icon for Edit (Pencil)   ganti juga                                            -->
+  </div>
+
+  <!-- Menu Items -->
+  <div class="menu-item">
+    <div>
+      <h4>Change Password</h4>
+      <p>Change your password regularly to maintain the security</p>
+    </div>
+    <a href="# " id="ganti-password"><i data-feather="chevron-right"></i> </a> <!--                                                 ganti icon-->
+  </div>
+
+  <div class="menu-item">
+    <div>
+      <h4>Help</h4>
+      <p>Reach out to our customer service for assistance</p>
+    </div>
+    <a href="# " id="Help"><i data-feather="chevron-right"></i> </a> <!--                                                 ganti icon-->
+  </div>
+
+  <!-- Social Media Section -->
+  <div class="social-section">
+    <p>Follow us on</p>
+    <a href="#"
+      ><img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+        alt="Instagram"
+    /></a>
+  </div>
+
+  <!-- Version -->
+  <p class="version">Version 1.24.01</p>
+
+  <!-- Logout Button -->
+  <button class="logout-btn">Log Out</button>
+</div>
+    
+
+
+
+    <script>
+      feather.replace();
+    </script>
+    <script >
+      document.getElementById("arrow-sett").addEventListener("click", function () {
+  // Arahkan halaman ke index.html dan scroll ke elemen dengan ID #home
+  window.location.href = "index.html#home";
+});
+
+    </script>
+    
+  </body>
+</html>

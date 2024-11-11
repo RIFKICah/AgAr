@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgAr - Home</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #faf5d7;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+      }
+
+      .navbar-logo img {
+        width: 50px;
+      }
+
+      .hero {
+        max-width: 400px;
+        margin: auto;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-lokasi {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .weather-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .weather-info img {
+        width: 40px;
+      }
+
+      .round-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #34a853;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      #no-data {
+        text-align: center;
+        margin-top: 50px;
+        color: #888;
+      }
+
+      .no-data-icon {
+        font-size: 50px;
+        color: #ccc;
+        margin-bottom: 10px;
+      }
+
+      .data-card {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .data-card img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        margin-right: 15px;
+      }
+
+      .data-card-content {
+        font-size: 14px;
+      }
+
+      .data-card-content span {
+        display: block;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-content" style="display: none">
+      <nav class="navbar">
+        <a href="homesementara.html" class="navbar-logo"
+          ><img src="logo.png" alt="Logo"
+        /></a>
+        <div class="navbar-nav">
+          <a href="settings.html" id="setting"
+            ><i data-feather="settings"></i
+          ></a>
+        </div>
+      </nav>
+
+      <section class="hero" id="home">
+        <main class="content">
+          <div class="card">
+            <div class="card-lokasi">
+              <i data-feather="map-pin"></i>
+              <span class="card-namalokasi">Sumbersari Jember</span>
+            </div>
+
+            <div class="card-content">
+              <div class="weather-info">
+                <img src="logo.png" alt="Weather Logo" class="weather-logo" />
+                <div class="humidity" id="humidity">
+                  Humidity: <span>60%</span>
+                </div>
+                <div class="temperature" id="temperature">
+                  Temperature: <span>22°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container for Data -->
+          <div id="data-container">
+            <!-- Contoh Data Card -->
+            <div class="data-card">
+              <img src="chili.png" alt="Cabai" />
+              <div class="data-card-content">
+                <span>Cabai Fufufafa</span>
+                Jemursari, Surabaya<br />
+                Plant: 31-09-2024<br />
+                Harvest: 05-12-2025
+              </div>
+              <a href="#edit"><i data-feather="edit-2"></i></a>
+            </div>
+            <!-- Tambahkan lebih banyak data card sesuai dengan data yang ada -->
+          </div>
+
+          <!-- Placeholder for "no data" message -->
+          <div id="no-data" style="display: none">
+            <i data-feather="cpu" class="no-data-icon"></i>
+            <p>No Devices Added</p>
+          </div>
+
+          <button class="round-button" onclick="addData()">
+            <i data-feather="plus"></i>
+          </button>
+        </main>
+      </section>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dataContainer = document.getElementById("data-container");
+        const noDataMessage = document.getElementById("no-data");
+        const mainContent = document.getElementById("main-content");
+
+        // Check if there is data; if not, display "No Devices Added" message
+        if (dataContainer.children.length === 0) {
+          noDataMessage.style.display = "block";
+        } else {
+          noDataMessage.style.display = "none";
+          mainContent.style.display = "block";
+        }
+
+        // Feather icon initialization
+        feather.replace();
+      });
+
+      function addData() {
+        // Simulate adding data to show main content (for example purpose)
+        const dataContainer = document.getElementById("data-container");
+        const noDataMessage = document.getElementById("no-data");
+        const mainContent = document.getElementById("main-content");
+
+        if (dataContainer.children.length === 0) {
+          noDataMessage.style.display = "none";
+          mainContent.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

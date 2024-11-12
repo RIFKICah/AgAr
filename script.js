@@ -26,3 +26,15 @@ window.addEventListener("load", function () {
     document.getElementById("no-data").style.display = "none";
   }
 });
+
+const saveButtonIoT = document.querySelector(".save-btn");
+
+saveButtonIoT.addEventListener("click", () => {
+  window.location.href = "device.html";
+});
+
+const saveButtonDevice = document.querySelector(".save-btn-device");
+
+saveButtonDevice.addEventListener("click", () => {
+  window.location.href = "device.html";
+});

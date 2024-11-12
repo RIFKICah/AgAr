@@ -69,11 +69,15 @@
       }
     </style>
   </head>
+  <script src="https://unpkg.com/feather-icons"></script>
   <body>
     <div class="container">
       <!-- Header -->
       <div class="header">
-        <i>&larr;</i>
+        <a href="homepage.html" id="arrowsett" class="arrow">
+          <i data-feather="arrow-left"></i>
+          <!-- Feather Icon -->
+        </a>
         <span>Add IoT</span>
       </div>
 
@@ -120,5 +124,9 @@
       <!-- Save Button -->
       <button class="save-btn">Save</button>
     </div>
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>

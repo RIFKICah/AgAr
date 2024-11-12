@@ -113,7 +113,7 @@
 
         .top-section {
             background-color: #fff5e0;
-            padding: 40px 20px;
+            padding: 40px 30px;
         }
 
         .welcome-text {
@@ -129,7 +129,7 @@
         .main-section {
             background-color: #C0EBA6;
             flex: 1;
-            padding: 70px 40px;
+            padding: 70px 30px;
         }
 
         .input-container {
@@ -161,7 +161,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 100px;
+            margin-top: 75px;
             /* margin: 30px 20px; */
         }
 
@@ -181,6 +181,7 @@
             justify-content: center;
             border: none;
             cursor: pointer;
+            border: 2px solid #444;
         }
 
         .bottom-links {

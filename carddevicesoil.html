@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Kelembaban Tanah</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Teks berada di tengah secara horizontal */
+        position: relative; /* Mengatur posisi relatif untuk ikon */
+      }
+
+      .card-header h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+        position: relative;
+        padding-bottom: 5px;
+        display: inline-block;
+        border-bottom: 2px solid #00000071; /* Border bawah hanya mencakup teks */
+      }
+
+      .edit-icon {
+        position: absolute;
+        right: 0; /* Posisi ikon edit tetap di kanan */
+        cursor: pointer;
+        font-size: 20px;
+        color: #555;
+      }
+
+      .card-body {
+        margin-top: 15%;
+      }
+
+      .data-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .data-section .label {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .data-section .value {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .data-section .status {
+        font-size: 16px;
+        font-weight: bold;
+        color: #5a4231;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h3>Kelembaban Tanah</h3>
+        <div class="edit-icon" data-feather="edit"></div>
+      </div>
+      <div class="card-body">
+        <div class="data-section">
+          <div class="label">Tanah</div>
+          <div class="status">Kering</div>
+        </div>
+        <div class="data-section">
+          <div class="label">Kelembaban</div>
+          <div class="value">25%</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Menginisialisasi Feather Icons
+      feather.replace();
+    </script>
+  </body>
+</html>

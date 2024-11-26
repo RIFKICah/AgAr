@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card DHT11</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Membuat header relatif untuk posisi ikon */
+      }
+
+      /* Teks DHT 11 dengan border bawah */
+      .card-header h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+        border-bottom: 2px solid #0000007b; /* Border bawah */
+        padding-bottom: 5px; /* Spasi antara teks dan border */
+      }
+
+      /* Ikon edit di sebelah kanan */
+      .card-header .edit-icon {
+        position: absolute; /* Posisi absolut relatif terhadap .card-header */
+        right: 0; /* Tempatkan di sebelah kanan */
+        cursor: pointer;
+        font-size: 20px;
+        color: #555;
+      }
+
+      .card-body {
+        margin-top: 10px;
+      }
+
+      .card-body .status {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 10px;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 10px 0;
+      }
+
+      .data-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .data-section .label {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .data-section .value {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <!-- Teks DHT 11 dengan border bawah -->
+        <h3>DHT 11</h3>
+        <!-- Ikon Edit -->
+        <div class="edit-icon" data-feather="edit"></div>
+      </div>
+      <div class="card-body">
+        <div class="status">Cuaca dingin</div>
+        <hr class="divider" />
+        <div class="data-section">
+          <div class="label">Suhu</div>
+          <div class="value">25&deg;</div>
+        </div>
+        <div class="data-section">
+          <div class="label">Kelembaban</div>
+          <div class="value">25%</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Menginisialisasi Feather Icons
+      feather.replace();
+    </script>
+  </body>
+</html>
